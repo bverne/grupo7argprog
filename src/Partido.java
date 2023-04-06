@@ -2,19 +2,29 @@ import java.util.ArrayList;
 
 public class Partido {
 
-    private ArrayList<Partido> listaPartidos;
     private String equipo1;
     private String equipo2;
     private int golesEquipo1;
     private int golesEquipo2;
+    private int fecha;
 
     private  String empate;
 
-    public Partido(String equipo1, String equipo2, int golesEquipo1, int golesEquipo2) {
+    public Partido(int fecha,String equipo1, int golesEquipo1, String equipo2, int golesEquipo2) {
+        this.fecha = fecha;
         this.equipo1 = equipo1;
-        this.equipo2 = equipo2;
         this.golesEquipo1 = golesEquipo1;
+        this.equipo2 = equipo2;
         this.golesEquipo2 = golesEquipo2;
+
+    }
+
+    public int getFecha() {
+        return fecha;
+    }
+
+    public void setFecha(int fecha) {
+        this.fecha = fecha;
     }
 
     public String getEquipo1() {
@@ -54,19 +64,7 @@ public class Partido {
     }
 
 
-    public String resultados (int golesEquipo1, int golesEquipo2){
 
-        if(golesEquipo1 > golesEquipo2){
-            return " el equipo  ganador es : " + equipo1
-                    + " ,  y el equipo perdedor es: " + equipo2;
-
-        }
-        if (golesEquipo1 < golesEquipo2){
-            return "el equipo ganador es el equipo: " + equipo2
-                    + " , y el equipo perdedor es: " + equipo1;
-        }
-        return "hubo un empate";
-    }
 
 
 

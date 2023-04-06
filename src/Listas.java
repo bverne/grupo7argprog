@@ -1,27 +1,32 @@
-import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Listas {
-    private ArrayList<Partido> listaPartidos;
+    private HashMap<Integer,Partido> listaPartidos;
 
     public Listas(){
-        listaPartidos =  new ArrayList<>();
+        listaPartidos =  new HashMap<>();
 
     }
 
     public void  agregarPartido (Partido partido){
-        listaPartidos.add(partido);
+        listaPartidos.put(partido.getFecha(),partido);
     }
+
+
 
     public int cantidadPartidos(){
         return listaPartidos.size();
     }
 
-    public Partido recorrerlista(){
-        for (Partido p: listaPartidos){
+    public Partido recorrerlistaPartido(){
+        for (Partido p: listaPartidos.values()){
             return p;
         }
         return null;
     }
+
+
+
 
 }
 
