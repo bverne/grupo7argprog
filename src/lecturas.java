@@ -11,19 +11,20 @@ public class lecturas {
         scPartido.useLocale(Locale.forLanguageTag("es-AR"));
         Listas listaPartido = new Listas();
         scPartido.useDelimiter("[;\\n\\r]+");
-        while(scPartido.hasNextInt()){
+        //while(scPartido.hasNextInt()){
 
-            int fecha = scPartido.nextInt();
-            String equipo1 = scPartido.next();
-            int golesEquipo1 = scPartido.nextInt();
-            String equipo2 = scPartido.next();
-            int golesEquipo2 = scPartido.nextInt();
-            Partido partido = new Partido(fecha,equipo1,golesEquipo1,equipo2,golesEquipo2);
-            listaPartido.agregarPartido(partido);
+            //int fecha = scPartido.nextInt();
+           // String equipo1 = scPartido.next();
+           // int golesEquipo1 = scPartido.nextInt();
+           // String equipo2 = scPartido.next();
+           // int golesEquipo2 = scPartido.nextInt();
+          //  Partido partido = new Partido(fecha,equipo1,golesEquipo1,equipo2,golesEquipo2);
+         //   listaPartido.agregarPartido(partido);
+          //  System.out.println(partido);
 
 
-        }
-        System.out.println(listaPartido.recorrerlistaPartido());
+       // }
+        //System.out.println(listaPartido.recorrerlistaPartido());
 
 
     }

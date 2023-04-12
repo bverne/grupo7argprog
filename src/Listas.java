@@ -1,15 +1,16 @@
 import java.util.HashMap;
 
 public class Listas {
-    private HashMap<Integer,Partido> listaPartidos;
+    protected HashMap<Integer,Partido> listaPartidos;
 
     public Listas(){
         listaPartidos =  new HashMap<>();
 
     }
 
-    public void  agregarPartido (Partido partido){
+    public void agregarPartido (Partido partido){
         listaPartidos.put(partido.getFecha(),partido);
+
     }
 
 
